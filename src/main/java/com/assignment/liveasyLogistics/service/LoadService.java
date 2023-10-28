@@ -37,16 +37,13 @@ public class LoadService {
         return loadResponseDto;
     }
 
-    public List<String> getLoadByShipperId(String id) {
+    public List<Load> getLoadByShipperId(String id) {
 
         List<String> loadList = new ArrayList<>();
 
         List<Load> loadEntityList = loadRepository.findByShipperId(id);
 
-        for(Load load:loadEntityList){
-            loadList.add("load id : "+load.getLoadId());
-        }
-        return loadList;
+        return loadEntityList;
     }
 
     public Load getLoadByLoadId(int id) {

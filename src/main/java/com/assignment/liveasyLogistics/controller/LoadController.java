@@ -26,9 +26,9 @@ public class LoadController {
 
     //it will get list of loads by shipper id
     @GetMapping("/get_load_by_shipper_id/{id}")
-    public List<String> getLoadByShipperId(@PathVariable String id){
+    public List<Load> getLoadByShipperId(@PathVariable String id){
 
-        List<String> loadList = loadService.getLoadByShipperId(id);
+        List<Load> loadList = loadService.getLoadByShipperId(id);
 
         return loadList;
     }
